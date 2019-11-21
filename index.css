@@ -1,0 +1,182 @@
+html {
+  background-color: rgb(21, 32, 43);
+}
+
+.light-white-font {
+  color: rgb(255, 255, 255);
+}
+
+.app-header {
+  height: 70px;
+  flex-shrink: 0;
+}
+
+#app {
+  min-height: 200px;
+  /* height: 100vh; */
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.app-body {
+  flex: auto 1 0;
+  margin: 0px 0px 76px 0px;
+}
+
+.app-footer {
+  height: 76px;
+  position: absolute;
+  bottom: 0;
+}
+
+@media (min-width: 300px) {
+  #app {
+    /* height: calc(100%-100px); */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-body {
+    margin: 0px 0px 56px 0px;
+  }
+
+  .app-header {
+    height: 50px;
+  }
+
+  .app-footer {
+    height: 56px;
+  }
+}
+
+@media (min-width: 300px) {
+  #app {
+    /* height: calc(100vh-100px); */
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+#app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.a-position {
+  position: absolute;
+}
+
+img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+#app-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-font {
+  font-family: 'Coda', monospace;
+  text-align: center;
+  line-height: 100%;
+  font-size: 20px;
+}
+
+@media (min-width: 300px) {
+  .content-font {
+    font-size: 30px;
+  }
+}
+
+.typer-background-color {
+  background-color: #17bf63;
+}
+
+.footer-font {
+  font-family: 'Coda', 'Arial', monospace;
+}
+
+.footer-center {
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  flex-flow: row wrap;
+  height: 50px;
+}
+
+.social-media {
+  order: 1;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 10px;
+  color: #808f9a;
+  bottom: 5px;
+  left: 5px;
+  order: 2;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+@media (min-height: 200px) and (min-width: 300px) {
+  a {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10%;
+    background: #1b2836;
+    color: #808f9a;
+    transition: border 0.1s, color 0.3s, background 0.3s;
+    text-decoration: none;
+  }
+
+  .fa {
+    background: #1b2836;
+    color: white;
+  }
+
+  .fa-envelope:hover {
+    background: #17bf63;
+    color: white;
+  }
+
+  .fa-github:hover {
+    background: #111111;
+    color: white;
+  }
+
+  .fa-linkedin:hover {
+    background: #0077b5;
+    color: white;
+  }
+
+  .fa-twitter:hover {
+    background: #55acee;
+    color: white;
+  }
+  .fa-telegram-plane:hover {
+    background: #0088cc;
+    color: white;
+  }
+}
