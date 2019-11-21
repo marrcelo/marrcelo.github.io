@@ -10,6 +10,18 @@
       gtag('js', new Date());
       gtag('config', 'UA-153117931-1');
     </script>
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-59DT52R');
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -23,57 +35,69 @@
 
     <title>Marcelo Magalhães</title>
   </head>
-  <div id="app-header" class="app-header">
-    <img
-      src="https://cdn0.iconfinder.com/data/icons/prehistoric-elements-3/64/Dinosaur-dino-brachiosaurus-animal-128.png"
-      title="That's what's up!"
-    />
-  </div>
-  <div id="app-body" class="app-body">
-    <div class="content-font content-center light-white-font">
-      <h5>
-        <div>
-          <p>What's up!</p>
-          <p>
-            My name is
-            <strong class="light-white-font">
-              Marcelo
-            </strong>
-            and I'm a
-            <strong class="light-white-font "><span id="age"></span> </strong>
-          </p>
-          <span class="typer typer-background-color"></span>
-          <p>from <strong class="light-white-font">Brasília, Brazil</strong>.</p>
-        </div>
-      </h5>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-59DT52R"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="app-header" class="app-header">
+      <img
+        src="https://cdn0.iconfinder.com/data/icons/prehistoric-elements-3/64/Dinosaur-dino-brachiosaurus-animal-128.png"
+        title="That's what's up!"
+      />
     </div>
-  </div>
-  <div id="app-footer" class="contact footer-center  app-footer">
-    <div class="copyright">
-      <p>&copy; 2019 Marcelo Magalhães</p>
+    <div id="app-body" class="app-body">
+      <div class="content-font content-center light-white-font">
+        <h5>
+          <div>
+            <p>What's up!</p>
+            <p>
+              My name is
+              <strong class="light-white-font">
+                Marcelo
+              </strong>
+              and I'm a
+              <strong class="light-white-font "><span id="age"></span> </strong>
+            </p>
+            <span class="typer typer-background-color"></span>
+            <p>from <strong class="light-white-font">Brasília, Brazil</strong>.</p>
+          </div>
+        </h5>
+      </div>
     </div>
-    <div class="social-media">
-      <a class="fa fa-envelope" title="Mail me!" href="mailto:magalhaesmarcelo@outlook.com.br" target="_blank"
-        ><strong><i></i></strong
-      ></a>
-      <a
-        class="fab fa-linkedin"
-        title="My professional information"
-        href="https://www.linkedin.com/in/marrcelo"
-        target="_blank"
-        ><strong><i></i></strong
-      ></a>
-      <a class="fab fa-github" title="My software projects" href="https://github.com/marrcelo" target="_blank"
-        ><strong><i></i></strong
-      ></a>
-      <a class="fab fa-twitter" title="My tweets" href="http://www.twitter.com/marrcelo_" target="_blank"
-        ><strong><i></i></strong
-      ></a>
-      <a class="fab fa-telegram-plane" title="Talk with me" href="https://www.t.me/Marrcelo" target="_blank"
-        ><strong><i></i></strong
-      ></a>
+    <div id="app-footer" class="contact footer-center  app-footer">
+      <div class="copyright">
+        <p>&copy; 2019 Marcelo Magalhães</p>
+      </div>
+      <div class="social-media">
+        <a class="fa fa-envelope" title="Mail me!" href="mailto:magalhaesmarcelo@outlook.com.br" target="_blank"
+          ><strong><i></i></strong
+        ></a>
+        <a
+          class="fab fa-linkedin"
+          title="My professional information"
+          href="https://www.linkedin.com/in/marrcelo"
+          target="_blank"
+          ><strong><i></i></strong
+        ></a>
+        <a class="fab fa-github" title="My software projects" href="https://github.com/marrcelo" target="_blank"
+          ><strong><i></i></strong
+        ></a>
+        <a class="fab fa-twitter" title="My tweets" href="http://www.twitter.com/marrcelo_" target="_blank"
+          ><strong><i></i></strong
+        ></a>
+        <a class="fab fa-telegram-plane" title="Talk with me" href="https://www.t.me/Marrcelo" target="_blank"
+          ><strong><i></i></strong
+        ></a>
+      </div>
     </div>
-  </div>
+  </body>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
   <script src="index.js"></script>
 </html>
