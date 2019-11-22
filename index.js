@@ -1,4 +1,4 @@
-var aboutStrings = [
+var typedStrings = [
   'Software Engineering student',
   'lifelong learner',
   'interested in internet privacy and security',
@@ -7,7 +7,7 @@ var aboutStrings = [
 ];
 
 var options = {
-  strings: aboutStrings,
+  strings: typedStrings,
   typeSpeed: 50,
   backSpeed: 20,
   loop: true,
@@ -20,9 +20,6 @@ function calcAge() {
   var birthdate = { year: 1993, month: 12, day: 8 };
   var now = new Date();
   var nowDate = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() };
-
-  console.log(birthdate);
-  console.log(nowDate);
 
   var age =
     birthdate.month < nowDate.month || (birthdate.month === nowDate.month && nowDate.day >= birthdate.day)
