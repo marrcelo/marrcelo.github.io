@@ -67,6 +67,12 @@ img {
   background-color: #17bf63;
 }
 
+.name-decoretion {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #17bf63;
+}
+
 .footer-font {
   font-family: 'Coda', 'Arial', monospace;
 }
@@ -112,11 +118,6 @@ a {
   text-decoration: none;
 }
 
-.fa {
-  background: #1b2836;
-  color: white;
-}
-
 .fa-envelope:hover {
   background: #17bf63;
   color: white;
@@ -139,5 +140,10 @@ a {
 
 .fa-telegram-plane:hover {
   background: #0088cc;
+  color: white;
+}
+
+.fa-id-card:hover {
+  background: firebrick;
   color: white;
 }
