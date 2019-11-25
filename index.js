@@ -45,6 +45,8 @@ var brTexts = {
   }
 };
 
+var typed;
+
 function calcAge() {
   var birthdate = { year: 1993, month: 12, day: 8 };
   var now = new Date();
@@ -80,6 +82,19 @@ function languageSelector() {
   }
 }
 
-var typed;
+function themeSelector() {
+  if (!document.getElementById('theme').checked) {
+    document.getElementById('app').style.backgroundColor = 'rgb(21, 32, 43)';
+    document.getElementById('app-header').style.color = 'white';
+    document.getElementById('app-body').style.color = 'white';
+    document.getElementById('icon-theme').className = 'fas fa-sun';
+  } else {
+    document.getElementById('app').style.backgroundColor = 'white';
+    document.getElementById('app-header').style.color = 'black';
+    document.getElementById('app-body').style.color = 'black';
+    document.getElementById('icon-theme').className = 'far fa-moon';
+  }
+}
 
 languageSelector();
+themeSelector();
