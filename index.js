@@ -19,6 +19,10 @@ var enTexts = {
     'fa-twitter': 'My tweets.',
     'fa-telegram-plane': 'Talk with me.',
     'fa-id-card': 'My resume.'
+  },
+  theme: {
+    dark: 'Change for light theme.',
+    light: 'Change for dark theme'
   }
 };
 
@@ -41,7 +45,12 @@ var brTexts = {
     'fa-linkedin': 'Meu Linkedin.',
     'fa-twitter': 'Meus tweets.',
     'fa-telegram-plane': 'Converse comigo.',
-    'fa-id-card': 'Meu currículo.'
+    'fa-id-card': 'Meu currículo.',
+    'icon-theme': 'Mudar'
+  },
+  theme: {
+    dark: 'Mudar para tema claro.',
+    light: 'Mudar para tema escuro.'
   }
 };
 
@@ -62,6 +71,9 @@ function calcAge() {
 
 function languageSelector() {
   var selectLanguage = document.getElementById('slider').checked ? brTexts : enTexts;
+  var themeIconTitle = document.getElementById('theme').checked
+    ? selectLanguage.theme.light
+    : selectLanguage.theme.dark;
 
   var options = {
     strings: selectLanguage.typedStrings,
@@ -74,25 +86,30 @@ function languageSelector() {
   if (typed !== undefined) typed.destroy();
   typed = new Typed('.typer', options);
 
-  for (const key in selectLanguage) {
+  for (var key in selectLanguage) {
     if (document.getElementById(key)) document.getElementById(key).innerHTML = selectLanguage[key];
   }
-  for (const key in selectLanguage.icons) {
+  for (var key in selectLanguage.icons) {
     if (document.getElementById(key)) document.getElementById(key).setAttribute('title', selectLanguage.icons[key]);
   }
+  document.getElementById('icon-theme').setAttribute('title', themeIconTitle);
 }
 
 function themeSelector() {
   if (!document.getElementById('theme').checked) {
+    var title = document.getElementById('slider').checked ? 'Mudar para tema claro.' : 'Change for light theme';
     document.getElementById('app').style.backgroundColor = 'rgb(21, 32, 43)';
     document.getElementById('app-header').style.color = 'white';
     document.getElementById('app-body').style.color = 'white';
     document.getElementById('icon-theme').className = 'fas fa-sun';
+    document.getElementById('icon-theme').setAttribute('title', title);
   } else {
+    var title = document.getElementById('slider').checked ? 'Mudar para tema escuro.' : 'Change for dark theme';
     document.getElementById('app').style.backgroundColor = 'white';
     document.getElementById('app-header').style.color = 'black';
     document.getElementById('app-body').style.color = 'black';
     document.getElementById('icon-theme').className = 'far fa-moon';
+    document.getElementById('icon-theme').setAttribute('title', title);
   }
 }
 
