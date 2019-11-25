@@ -34,25 +34,34 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="app-header" class="app-header">
+    <div id="app-header" class="app-header light-white-font">
       <img
         src="https://cdn0.iconfinder.com/data/icons/prehistoric-elements-3/64/Dinosaur-dino-brachiosaurus-animal-128.png"
         title="That's what's up!"
       />
+      <strong class="switch-label">pt-br</strong>
+      <label class="switch">
+        <input id="slider" type="checkbox" onchange="languageSelector()" />
+        <span class="slider round"></span>
+      </label>
+      <strong class="switch-label">en</strong>
     </div>
-    <div id="app-body" class="app-body">
-      <div class="content-font content-center light-white-font">
+    <div id="app-body" class="app-body light-white-font">
+      <div class="content-font content-center">
         <h5>
           <div>
-            <p>What's up!</p>
+            <p id="site-text-0"></p>
             <p>
-              My name is
-              <strong class="light-white-font name-decoretion">Marcelo</strong>
-              and I'm a
-              <strong class="light-white-font "><span id="age"></span> </strong>
+              <span id="site-text-1"></span>
+              <strong class="name-decoretion">Marcelo</strong>
+              <span id="site-text-2"></span>
+              <strong class=""><span id="age"></span> </strong>
             </p>
             <span class="typer typer-background-color"></span>
-            <p>from <strong class="light-white-font">Brasília, Brazil</strong>.</p>
+            <p>
+              <span id="site-text-3"></span>
+              <strong id="site-text-4" class=""></strong>
+            </p>
           </div>
         </h5>
       </div>
@@ -63,48 +72,48 @@
       </div>
       <div class="social-media">
         <a
+          id="fa-id-card"
           class="fas fa-id-card"
-          title="My resume."
           href="https://drive.google.com/open?id=1Wm3rVd84kLurlkQEvJU1Yg1MZ-H-bUlx"
           onclick="dataLayer.push({'event': 'resume-click'});"
           target="_blank"
           ><strong><i></i></strong
         ></a>
         <a
+          id="fa-linkedin"
           class="fab fa-linkedin"
-          title="My Linkedin."
           href="https://www.linkedin.com/in/marrcelo"
           onclick="dataLayer.push({'event': 'linkedin-click'});"
           target="_blank"
           ><strong><i></i></strong
         ></a>
         <a
+          id="fa-envelope"
           class="fa fa-envelope"
-          title="Mail me!"
           href="mailto:magalhaesmarcelo@outlook.com.br"
           onclick="dataLayer.push({'event': 'email-click'});"
           target="_blank"
           ><strong><i></i></strong
         ></a>
         <a
+          id="fa-telegram-plane"
           class="fab fa-telegram-plane"
-          title="Talk with me."
           href="https://www.t.me/Marrcelo"
           onclick="dataLayer.push({'event': 'telegram-click'});"
           target="_blank"
           ><strong><i></i></strong
         ></a>
         <a
+          id="fa-github"
           class="fab fa-github"
-          title="My software projects."
           href="https://github.com/marrcelo"
           onclick="dataLayer.push({'event': 'github-click'});"
           target="_blank"
           ><strong><i></i></strong
         ></a>
         <a
+          id="fa-twitter"
           class="fab fa-twitter"
-          title="My tweets."
           href="http://www.twitter.com/marrcelo_"
           onclick="dataLayer.push({'event': 'twitter-click'});"
           target="_blank"
