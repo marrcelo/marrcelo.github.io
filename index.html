@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="app" lang="en">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153117931-1"></script>
     <script>
@@ -39,6 +39,10 @@
         src="https://cdn0.iconfinder.com/data/icons/prehistoric-elements-3/64/Dinosaur-dino-brachiosaurus-animal-128.png"
         title="That's what's up!"
       />
+      <label class="switch">
+        <input id="theme" type="checkbox" onchange="themeSelector()" />
+        <span id="icon-theme"></span>
+      </label>
       <strong class="switch-label">pt-br</strong>
       <label class="switch">
         <input id="slider" type="checkbox" onchange="languageSelector()" />
