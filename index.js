@@ -59,12 +59,13 @@ var typed;
 function calcAge() {
   var birthdate = { year: 1993, month: 12, day: 8 };
   var now = new Date();
-  var nowDate = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() };
+  var nowDateObject = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() };
 
   var age =
-    birthdate.month < nowDate.month || (birthdate.month === nowDate.month && nowDate.day >= birthdate.day)
-      ? nowDate.year - birthdate.year
-      : nowDate.year - birthdate.year - 1;
+    birthdate.month < nowDateObject.month ||
+    (birthdate.month === nowDateObject.month && nowDateObject.day >= birthdate.day)
+      ? nowDateObject.year - birthdate.year
+      : nowDateObject.year - birthdate.year - 1;
 
   return age;
 }
