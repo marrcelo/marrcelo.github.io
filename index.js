@@ -56,6 +56,12 @@ var brTexts = {
 
 var typed;
 
+function setCopyright() {
+  var now = new Date();
+  var year = now.getFullYear();
+  document.getElementById('copyright').innerHTML = `&copy; 2019-${year} Marcelo Magalhães`;
+}
+
 function calcAge() {
   var birthdate = { year: 1993, month: 12, day: 8 };
   var now = new Date();
@@ -114,5 +120,6 @@ function themeSelector() {
   }
 }
 
+setCopyright();
 languageSelector();
 themeSelector();
