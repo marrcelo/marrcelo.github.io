@@ -1,10 +1,76 @@
-var enTexts = {
+const calcAge = () => {
+  const birthdate = { year: 1993, month: 12, day: 8 };
+  const now = new Date();
+  const nowDateObject = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() };
+
+  return birthdate.month < nowDateObject.month ||
+    (birthdate.month === nowDateObject.month && nowDateObject.day >= birthdate.day)
+    ? nowDateObject.year - birthdate.year
+    : nowDateObject.year - birthdate.year - 1;
+};
+
+const setCopyright = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  document.getElementById('copyright').innerHTML = `&copy; 2019-${year} Marcelo Magalhães`;
+};
+
+const setLightTheme = () => {
+  const title = document.getElementById('slider').checked ? 'Mudar para tema claro.' : 'Change for light theme';
+  document.getElementById('app').style.backgroundColor = 'rgb(21, 32, 43)';
+  document.getElementById('app-header').style.color = 'white';
+  document.getElementById('app-body').style.color = 'white';
+  document.getElementById('icon-theme').className = 'fas fa-sun';
+  document.getElementById('icon-theme').setAttribute('title', title);
+};
+
+const setDarkTheme = () => {
+  const title = document.getElementById('slider').checked ? 'Mudar para tema escuro.' : 'Change for dark theme';
+  document.getElementById('app').style.backgroundColor = 'white';
+  document.getElementById('app-header').style.color = 'black';
+  document.getElementById('app-body').style.color = 'black';
+  document.getElementById('icon-theme').className = 'far fa-moon';
+  document.getElementById('icon-theme').setAttribute('title', title);
+};
+
+const themeSelector = () => (!document.getElementById('theme').checked ? setLightTheme() : setDarkTheme());
+
+let typed;
+const languageSelector = () => {
+  const selectLanguage = document.getElementById('slider').checked ? brTexts : enTexts;
+  const themeIconTitle = document.getElementById('theme').checked
+    ? selectLanguage.theme.light
+    : selectLanguage.theme.dark;
+
+  const options = {
+    strings: selectLanguage.typedStrings,
+    typeSpeed: 50,
+    backSpeed: 20,
+    loop: true,
+    backDelay: 1000
+  };
+
+  if (typed !== undefined) typed.destroy();
+  typed = new Typed('.typer', options);
+
+  for (const key in selectLanguage) {
+    if (document.getElementById(key)) document.getElementById(key).innerHTML = selectLanguage[key];
+  }
+
+  for (const key in selectLanguage.icons) {
+    if (document.getElementById(key)) document.getElementById(key).setAttribute('title', selectLanguage.icons[key]);
+  }
+
+  document.getElementById('icon-theme').setAttribute('title', themeIconTitle);
+};
+
+const enTexts = {
   'site-text-0': "What's up!",
   'site-text-1': 'My name is',
   'site-text-2': "and I'm a",
-  age: calcAge() + ' yo',
-  'site-text-3': 'from',
-  'site-text-4': 'Brasília, Brazil.',
+  'site-text-3': `${calcAge()} yo`,
+  'site-text-4': 'from',
+  'site-text-5': 'Brasília, Brazil.',
   typedStrings: [
     'Software Engineering student',
     'interested in internet privacy and security',
@@ -26,13 +92,13 @@ var enTexts = {
   }
 };
 
-var brTexts = {
+const brTexts = {
   'site-text-0': 'Olá!',
   'site-text-1': 'Meu nome é',
   'site-text-2': '',
-  age: 'e sou',
-  'site-text-3': 'de',
-  'site-text-4': 'Brasília, Brasil.',
+  'site-text-3': 'e sou',
+  'site-text-4': 'de',
+  'site-text-5': 'Brasília, Brasil.',
   typedStrings: [
     'Estudante de Engenharia de Software',
     'desenvolvedor de software',
@@ -53,72 +119,6 @@ var brTexts = {
     light: 'Mudar para tema escuro.'
   }
 };
-
-var typed;
-
-function setCopyright() {
-  var now = new Date();
-  var year = now.getFullYear();
-  document.getElementById('copyright').innerHTML = `&copy; 2019-${year} Marcelo Magalhães`;
-}
-
-function calcAge() {
-  var birthdate = { year: 1993, month: 12, day: 8 };
-  var now = new Date();
-  var nowDateObject = { year: now.getFullYear(), month: now.getMonth() + 1, day: now.getDate() };
-
-  var age =
-    birthdate.month < nowDateObject.month ||
-    (birthdate.month === nowDateObject.month && nowDateObject.day >= birthdate.day)
-      ? nowDateObject.year - birthdate.year
-      : nowDateObject.year - birthdate.year - 1;
-
-  return age;
-}
-
-function languageSelector() {
-  var selectLanguage = document.getElementById('slider').checked ? brTexts : enTexts;
-  var themeIconTitle = document.getElementById('theme').checked
-    ? selectLanguage.theme.light
-    : selectLanguage.theme.dark;
-
-  var options = {
-    strings: selectLanguage.typedStrings,
-    typeSpeed: 50,
-    backSpeed: 20,
-    loop: true,
-    backDelay: 1000
-  };
-
-  if (typed !== undefined) typed.destroy();
-  typed = new Typed('.typer', options);
-
-  for (var key in selectLanguage) {
-    if (document.getElementById(key)) document.getElementById(key).innerHTML = selectLanguage[key];
-  }
-  for (var key in selectLanguage.icons) {
-    if (document.getElementById(key)) document.getElementById(key).setAttribute('title', selectLanguage.icons[key]);
-  }
-  document.getElementById('icon-theme').setAttribute('title', themeIconTitle);
-}
-
-function themeSelector() {
-  if (!document.getElementById('theme').checked) {
-    var title = document.getElementById('slider').checked ? 'Mudar para tema claro.' : 'Change for light theme';
-    document.getElementById('app').style.backgroundColor = 'rgb(21, 32, 43)';
-    document.getElementById('app-header').style.color = 'white';
-    document.getElementById('app-body').style.color = 'white';
-    document.getElementById('icon-theme').className = 'fas fa-sun';
-    document.getElementById('icon-theme').setAttribute('title', title);
-  } else {
-    var title = document.getElementById('slider').checked ? 'Mudar para tema escuro.' : 'Change for dark theme';
-    document.getElementById('app').style.backgroundColor = 'white';
-    document.getElementById('app-header').style.color = 'black';
-    document.getElementById('app-body').style.color = 'black';
-    document.getElementById('icon-theme').className = 'far fa-moon';
-    document.getElementById('icon-theme').setAttribute('title', title);
-  }
-}
 
 setCopyright();
 languageSelector();
