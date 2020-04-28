@@ -82,7 +82,6 @@ const enTexts = {
     'fa-envelope': 'Mail me!',
     'fa-github': 'My personal software projects.',
     'fa-linkedin': 'My Linkedin.',
-    'fa-twitter': 'My tweets.',
     'fa-telegram-plane': 'Talk with me.',
     'fa-id-card': 'My resume.'
   },
@@ -109,7 +108,6 @@ const brTexts = {
     'fa-envelope': 'Meu e-mail.',
     'fa-github': 'Meus projetos.',
     'fa-linkedin': 'Meu Linkedin.',
-    'fa-twitter': 'Meus tweets.',
     'fa-telegram-plane': 'Converse comigo.',
     'fa-id-card': 'Meu currículo.',
     'icon-theme': 'Mudar'
