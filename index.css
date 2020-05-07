@@ -55,13 +55,13 @@ img {
 }
 
 .typer-background-color {
-  background-color: #17bf63;
+  background-color: #037a32;
 }
 
 .name-decoretion {
   text-decoration: underline;
   text-decoration-style: dashed;
-  text-decoration-color: #17bf63;
+  text-decoration-color: #037a32;
 }
 
 .footer-font {
@@ -109,7 +109,7 @@ a {
 }
 
 a.fa-envelope:hover {
-  background: #17bf63;
+  background: #037a32;
   color: white;
 }
 
@@ -183,11 +183,11 @@ a.fa-github:hover {
 }
 
 input:checked + .slider {
-  background-color: #17bf63;
+  background-color: #037a32;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #17bf63;
+  box-shadow: 0 0 1px #037a32;
 }
 
 input:checked + .slider:before {
