@@ -11,7 +11,9 @@ function svgBufferToPngBuffer(svg: string) {
 
 export async function generateOgImageForPost(post: CollectionEntry<"blog">) {
   const svg = await postOgImage(post);
-  return svgBufferToPngBuffer(svg);
+  const buffer: Buffer = svgBufferToPngBuffer(svg);
+  // Convert Buffer to Uint8Array which is compatible with Blob
+  return new Blob([new Uint8Array(buffer)]).stream();
 }
 
 export async function generateOgImageForSite() {
